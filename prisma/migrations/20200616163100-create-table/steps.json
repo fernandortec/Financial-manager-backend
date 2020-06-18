@@ -1,0 +1,91 @@
+{
+  "version": "0.3.14-fixed",
+  "steps": [
+    {
+      "tag": "CreateSource",
+      "source": "db"
+    },
+    {
+      "tag": "CreateArgument",
+      "location": {
+        "tag": "Source",
+        "source": "db"
+      },
+      "argument": "provider",
+      "value": "\"postgresql\""
+    },
+    {
+      "tag": "CreateArgument",
+      "location": {
+        "tag": "Source",
+        "source": "db"
+      },
+      "argument": "url",
+      "value": "\"postgres://zwzlgdop:A5_JTaiDaRzVwmWZdc3jqAkgQl9fScQC@ruby.db.elephantsql.com:5432/zwzlgdop\""
+    },
+    {
+      "tag": "CreateModel",
+      "model": "Emprestimo"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Emprestimo",
+      "field": "cpf",
+      "type": "String",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateDirective",
+      "location": {
+        "path": {
+          "tag": "Field",
+          "model": "Emprestimo",
+          "field": "cpf"
+        },
+        "directive": "unique"
+      }
+    },
+    {
+      "tag": "CreateField",
+      "model": "Emprestimo",
+      "field": "uf",
+      "type": "String",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Emprestimo",
+      "field": "data_nascimento",
+      "type": "String",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Emprestimo",
+      "field": "valor",
+      "type": "Int",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Emprestimo",
+      "field": "taxa_juros_simples",
+      "type": "Float",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Emprestimo",
+      "field": "parcelas",
+      "type": "Int",
+      "arity": "Required"
+    },
+    {
+      "tag": "CreateField",
+      "model": "Emprestimo",
+      "field": "valor_total",
+      "type": "Int",
+      "arity": "Required"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+node_modules
+
+prisma/.env
+
+src/.env

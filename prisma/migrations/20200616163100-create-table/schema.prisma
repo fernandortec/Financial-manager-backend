@@ -1,0 +1,18 @@
+datasource db {
+  provider = "postgresql"
+  url = "***"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Emprestimo {
+  cpf String @unique
+  uf String
+  data_nascimento String
+  valor Int
+  taxa_juros_simples Float
+  parcelas Int
+  valor_total Int
+}
